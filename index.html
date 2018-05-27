@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>UVV - JOKENPÔ</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    	function gerando(min, max){
+    		var possibilidades = max - min;
+    		var num1 = Math.random() * possibilidades;
+    		if(form1.jogadas.value==1){
+    			if(num1 > 2){
+    				alert("Você escolheu PAPEL e ganhou de PEDRA");
+    			}else if(num1 > 1){
+    				alert("Você escolheu PAPEL e perdeu para TESOURA");
+    			}else {
+    				alert("Você escolheu PAPEL e empatou com PAPEL");
+    			}
+    		}else if(form1.jogadas.value==2){
+    			if(num1 > 2){
+    				alert("Você escolheu TESOURA e ganhou de PAPEL");
+    			}else if(num1 > 1){
+    				alert("Você escolheu TESOURA e perdeu para PEDRA");
+    			}else {
+    				alert("Você escolheu TESOURA e empatou com TESOURA");
+    			}
+
+    		}else if(form1.jogadas.value==3){
+    			if(num1 > 2){
+    				alert("Você escolheu PEDRA e ganhou de TESOURA");
+    			}else if(num1 > 1){
+    				alert("Você escolheu PEDRA e perdeu para PAPEL");
+    			}else {
+    				alert("Você escolheu PEDRA e empatou com PEDRA");
+    			}
+    		}
+    	}
+    </script>
+  </head>
+  <body background="jokenpo.jpg" width=”50” height=”40%” bgproperties="fixed">
+  	<form name="form1" onsubmit="gerando(0,3)">
+  	<font face="verdana" color="black"> 
+  		 <h1>Escolha: 1 PAPEL, 2 TESOURA e 3 PEDRA</h1>
+  		 </font>
+  		 <input type="text" name="jogadas"/>
+  		<input type="submit" value="JOGAR"/>
+  	</form>
+    
+  	</body>
+  	</html> 
+    
